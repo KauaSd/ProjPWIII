@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+<title>Sobre a MetamorphIA - MetamorphIA</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <header id="pageHeader">
+    <div class="img">
+      <img src="..." class="logo" onclick="mostrarPagina('home')"/>
+    </div>
+      
+    <div class="infos">
+      <button class="btnInfo" onclick="mostrarPagina('servico')">Serviço</button>
+      <button class="btnInfo" onclick="mostrarPagina('sobre')">Sobre</button>
+      <button class="btnInfo" onclick="mostrarPagina('contato')">Contato</button>
+    </div>
+
+    <div class="log">
+      <button class="btnLog">Cadastre-se</button>
+      <button class="btnLog" onclick="login()">Entrar</button>
+    </div>
+      <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="mostrarPagina('home');toggleMobile()">Home</a>
+  <a href="#" onclick="mostrarPagina('servico');toggleMobile()">Serviços</a>
+  <a href="#" onclick="mostrarPagina('sobre');toggleMobile()">Sobre</a>
+  <a href="#" onclick="mostrarPagina('contato');toggleMobile()">Contato</a>
+</div>
+  <main>
+    <div id="home" class="pagina ativa">
+      <section class="home">
+    <div class="txtpeq">Educação Inclusiva com IA</div>
+    <h1 class="home-title">
+      Educação que se adapta<br><em>a cada criança</em>
+    </h1>
+    <p class="home-sub">
+      Apoio inteligente para professores que precisam de mais tempo e de ferramentas que realmente entendem a diversidade da sala de aula.
+    </p>
+    <div class="cta-row">
+      <button class="btn-primary" >Comece a usar agora</button>
+      <button class="btn-secondary" onclick="mostrarPagina('servico')">Como funciona</button>
+    </div>
+  </section>
+      <img src="..." class="imghome"/>
+    </div>
+    <div class="pagina" id="servico"> 
+      <div class="servstyle">
+      <h1>Como Funciona</h1>
+<p>O MetamorphIA combina um modelo de linguagem avançado com <b><i><span class="destaque">uma base de dados curada por especialistas em educação inclusiva</span></i></b>.
+    <br>
+    <br>
+    Quando você descreve uma atividade e o perfil do seu aluno, o sistema analisa as duas fontes juntas — o conhecimento geral do modelo e as referências pedagógicas específicas da base — e gera sugestões de adaptação contextualizadas e prontas para aplicar.
+    <br>
+    <br>
+    Não é uma busca comum. É um agente inteligente que entende o que você precisa e te encaminha para a melhor abordagem, levando em conta o tipo de neurodivergência, o objetivo da atividade e a realidade da sua sala de aula.
+    <br>
+    <br>
+    <b><i>MetamorphIA: <span class="destaque">tecnologia que entende o professor, para alcançar cada aluno.</span></i></b>
+</p>
+</div>
+    </div>
+    <div id="sobre" class="pagina">
+          <div class="texto">
+        <h1>Sobre Nós</h1>
+        <p>O MetamorphIA nasceu com um propósito claro: <b><i><span class="destaque">tornar a educação mais acessível, inclusiva e eficiente para todos</i></b>.</span>
+          <br>
+          <br>
+          Sabemos que professores da educação infantil e do ensino fundamental I enfrentam, diariamente, o desafio de adaptar atividades para atender alunos com diferentes formas de aprender — especialmente crianças neurodivergentes.
+          <br>
+          Pensando nisso, desenvolvemos uma plataforma que utiliza inteligência artificial para auxiliar na adaptação de atividades pedagógicas de forma prática e personalizada.
+          <br>
+          <br>
+          O MetamorphIA atua como um apoio ao professor, oferecendo sugestões que respeitam as necessidades específicas de cada aluno, sem substituir o olhar humano, mas potencializando-o.
+          <br>
+          Nosso objetivo é reduzir o tempo gasto com adaptações, aumentar a qualidade das estratégias pedagógicas e contribuir para um ambiente escolar mais inclusivo.
+          <br>
+          Acreditamos que, com as ferramentas certas, todo educador pode transformar sua prática — e todo aluno pode aprender de forma mais significativa.
+          <br>
+          <br>
+          <b><i>MetamorphIA: <span class="destaque">adaptando caminhos, transformando aprendizagens.</span></i></b>
+        </p>
+      </div>
+      <div class="imgSobre">
+        <img src="./imgs/imgKid.webp" height="500px" style="border-radius: 50px;">
+      </div>
+    </div>
+
+    <div id="contato" class="pagina">
+      <div class="contato">
+        <div class="contatoinfo">
+      <div class="contact-details">
+        <div class="contact-item">
+        </div>
+        <div class="contact-item">
+        </div>    
+        <div class="divForm">
+        <div class="formservice">
+                <h1 class="title">Nos mande uma mensagem!</h1>
+                <p>Digite seu nome:</p>
+                <input type="text" class="inputlog" id="nome">
+                <p>Digite seu e-mail:</p>
+                <input type="text" class="inputlog" id="email">
+                <p>Digite seu telefone:</p>
+                <input type="text" class="inputlog" id="tel">
+                <p>Digite sua mensagem:</p>
+                <input type="text" class="inputlog" id="msg">
+                <br>
+                <br>
+                <button class="btnEntrar" id="btnEnviar">Enviar</button>
+        </div>
+    </div>
+    </div>
+
+      </div>
+    <div class="contatoform">
+      <h1>Lista de pessoas</h1>   
+    <div id="clients-container">
+        <p class="loading-message">Carregando dados...</p>
+        <div id="clients-table-container">
+            </div>
+      </div>
+        </div>
+  </main>
+
+  <footer id="pageFooter">
+    <p>Sobre nós | Contato | Política de Privacidade | Termos de Uso
+      <br>
+      © 2026 MetamorphIA. Todos os direitos reservados.
+      <br>
+      <br>
+</p>
+  </footer>
+
+</body>
+<script src="script.js"></script>
+</html>

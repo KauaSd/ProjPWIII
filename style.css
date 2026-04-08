@@ -1,0 +1,446 @@
+.pagina{
+    display: none;
+}
+.pagina.ativa{
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+display: flex;
+flex-direction: column;
+height: 100vh;
+margin: 0;
+background-color: #f2f2f2;
+font-family: 'Poppins', sans-serif;
+}
+header, footer {
+padding: 1.2em;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.infos, .log{
+    display: flex;
+    gap: 1rem;
+}
+
+.btnInfo, .btnLog{
+    all: unset;
+    font-size: 1rem;
+    color: #333333;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+.btnInfo:hover{
+    color: rgb(171, 120, 253);
+    border-bottom: 2px solid rgb(171, 120, 253);
+}
+.btnLog{
+    border: 1px solid #333333;
+    border-radius: 1rem;
+    height: 1.875rem;
+    padding: 0 1.25rem;
+    white-space: nowrap;
+}
+.btnLog:hover{
+    background-color: rgb(171, 120, 253);
+    color: #f2f2f2;
+    border-color: rgb(171, 120, 253);
+}
+
+main{
+    flex: 1;
+    padding: clamp(1rem, 4vw, 6.25rem);
+}
+.logo{
+    cursor: pointer;
+}
+
+footer{
+    font-size: 0.8125rem;
+    background-color: rgb(117, 80, 175);
+    display: flex;
+}
+.divForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.formulario, .formservice{
+  border: 1px solid black;
+  border-radius: 2.5rem;
+  padding: 3.75rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.btnEntrar{
+    border: 1px solid black;
+    border-radius: 2.5rem;
+    height: 1.875rem;
+    cursor: pointer;
+}
+.formulario:hover{
+    transform: translateY(-1.25rem);
+    transition: 1s;
+}
+
+.inputlog{
+    border: 1px solid black;
+    border-radius: 2.5rem;
+    height: 1.25rem;
+}
+#home.ativa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#sobre.ativa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.75rem;
+}
+
+.texto{
+    max-width: 60%;
+    text-align: justify;
+}
+.destaque {
+    text-decoration: underline;
+    text-decoration-color: rgb(171, 120, 253);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;  
+}
+
+.imgSobre{
+    display: inline-flex;
+    align-self: flex-start;
+    transition: 1s;
+}
+.imgSobre:hover{
+    transform: translateY(-1.25rem);
+    transition: 1s;
+}
+.home {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.home-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+.home-title em {
+    font-style: italic;
+    color: rgb(171, 120, 253);
+}
+.home-sub {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 540px;
+    margin: 0 auto 2.5rem;
+}
+
+.cta-row {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: rgb(171, 120, 253);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.75rem 1.75rem;
+    border: 1px solid rgb(171, 120, 253);
+    cursor: pointer;
+    border-radius: 1rem;
+    white-space: nowrap;
+}
+
+.btn-primary:hover { 
+    color: rgb(171, 120, 253);
+    background: transparent;
+    border: 1px solid rgb(171, 120, 253);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: rgb(171, 120, 253);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    padding: 0.75rem 1.75rem;
+    border: 0.5px solid;
+    cursor: pointer;
+    border-radius: 1rem;
+    white-space: nowrap;
+}
+
+.btn-secondary:hover { 
+    background: rgb(171, 120, 253);
+    color: #fff;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+}
+.hamburger span {
+    display: block;
+    width: 22px; height: 1.5px;
+    background: rgb(171, 120, 253);
+}  
+.mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #f2f2f2;
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+main.contato{
+    display: block;
+    padding:0;
+}
+.contato{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contatoinfo{
+    background:#b8aec2;
+    padding: 6rem 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.contatoform{
+    padding: 6rem 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: none;
+}
+#clients-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+#clients-table-container th {
+    background-color: rgb(171, 120, 253);
+    color: #fff;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+#clients-table-container td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+#clients-table-container tr:nth-child(even) {
+    background-color: #f9f4ff;
+}
+
+#clients-table-container tr:hover {
+    background-color: #ede5ff;
+    transition: 0.2s;
+}
+
+#clients-container {
+    width: 100%;
+}
+.servstyle{
+    text-align: justify;
+}
+@media (max-width: 1200px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu.open {
+        display: flex; 
+    }
+
+    .mobile-menu a {
+        font-family: 'DM Serif Display', serif;
+        font-size: 2rem;
+        text-decoration: none;
+        color: rgb(171, 120, 253);
+        font-weight: 300;
+        transition: color .25s;
+    }
+
+    body {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    main {
+        display: block;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .imghome {
+        display: none;
+    }
+
+    .infos {
+        display: none;
+    }
+
+    .log {
+        display: none;
+    }
+
+    .home {
+        margin-bottom: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .home-title {
+        font-size: 2.2rem;
+    }
+
+    .home-sub {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+
+    .cta-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+    }
+
+    #home.ativa,
+    #sobre.ativa,
+    #servico.ativa {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .imgSobre {
+        justify-content: center;
+        align-self: center;
+        max-width: 100%;
+    }
+
+    .formulario {
+        width: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    #contato.ativa {
+        display: block;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .contato {
+        grid-template-columns: 1fr;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .contatoinfo {
+        padding: 2rem 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .contatoform {
+        padding: 2rem 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .divForm {
+        height: auto;
+    }
+
+    .formservice {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem;
+        box-sizing: border-box;
+        border-radius: 1rem;
+    }
+
+    .inputlog {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .btnEntrar {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #clients-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #clients-table-container {
+        overflow-x: auto;
+        width: 100%;
+        display: block;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 500px;
+        table-layout: auto;
+        word-break: break-word;
+    }
+}
